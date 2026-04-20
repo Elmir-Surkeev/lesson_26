@@ -1,13 +1,13 @@
 package elmirsurkeev.kg.moviesearch;
 
 import com.google.gson.Gson;
+
+import javax.xml.crypto.Data;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.nio.charset.StandardCharsets;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Scanner;
+import java.util.*;
 
 public class Action {
     public MovieData data;
@@ -39,36 +39,37 @@ public class Action {
 
     public void startApp() {
         readJson();
-
-        System.out.println(" Выберите деиствие " +
-                            "\n 1 для просмотра всех фильмов" +
-                            "\n 2 для поиска по записи" +
-                            "\n 3 для сортировки коллекций: по году выпуска, по жанру, по режжисеру");
+        if (data == null) {
+            System.out.println("Ошибка: Данные не загружены.");
+            return;
+        }
 
         while (true) {
-            int choice = sc.nextInt();
+            System.out.println("\n================ МЕНЮ УПРАВЛЕНИЯ ================");
+            System.out.println("1. Просмотр всех фильмов");
+            System.out.println("2. Поиск фильма по названию");
+            System.out.println("3. Сортировки (Имя / Год / Режиссер)");
+            System.out.println("4. Найти фильмы по АКТЕРУ");
+            System.out.println("5. Список всех актеров и их ролей");
+            System.out.println("6. Найти фильмы по ГОДУ");
+            System.out.println("7. Найти фильмы по РЕЖИССЕРУ");
+            System.out.println("0. Выход");
+            System.out.print("Выберите действие: ");
 
-            if (data == null) {
-                System.out.println("Список фильмов пуст");
-                return;
-            }
+            int choice = sc.nextInt();
+            sc.nextLine();
+
+            if (choice == 0) break;
 
             switch (choice) {
-                case 1:
-                    //просмотр всех фильмов
-                    showAllFilms(this.data);
-                    break;
-                case 2:
-                    //вызов метода по записи
-                    searchMovieByName(data);
-                    break;
-                case 3:
-                    //сортировка
-                    sortedFilms(data);
-
-                    break;
-                default:
-                    System.out.println("Введите корректное значение");
+                case 1 -> showAllFilms(data);
+                case 2 -> searchMovieByName(data);
+                case 3 -> sortedFilms(data);
+                case 4 -> searchByActor(data);
+                case 5 -> listAllActors(data);
+                case 6 -> searchByYear(data);
+                case 7 -> searchByDirector(data);
+                default -> System.out.println("Некорректный ввод. Попробуйте снова.");
             }
         }
     }
@@ -154,4 +155,64 @@ public class Action {
                 m.getYear(),
                 m.getDirector().getFullName());
     }
+
+    public void searchByActor(MovieData data) {
+        System.out.println("Введите имя актера");
+        String actorName = sc.next();
+
+        System.out.println("\nПоиск фильмов с актером: " + actorName);
+        boolean found = false;
+
+        for (Movie movie : data.movies) {
+            for (Cast member : movie.getCast()) {
+                if (member.getFullName().equalsIgnoreCase(actorName)) {
+                    System.out.println(movie.getName() + " Роль: " + member.getRole());
+                    found = true;
+                }
+            }
+        }
+        if (!found) System.out.println("Актер не найден.");
+    }
+    public void listAllActors(MovieData data) {
+        System.out.println("Полный список актеров отсортирован");
+        TreeSet<String> actors = new TreeSet<>();
+
+        for (Movie movie : data.movies) {
+            for (Cast member : movie.getCast()) {
+                actors.add(member.getFullName() + "роль: " + member.getRole());
+            }
+        }
+
+        for (String actorInfo : actors) {
+            System.out.println(actorInfo);
+        }
+    }
+    public void searchByYear(MovieData data) {
+        System.out.println("Введите год");
+        int year = sc.nextInt();
+        System.out.println("\nФильмы " + year + " года:");
+        data.movies.stream()
+                .filter(m -> m.getYear() == year)
+                .forEach(m -> System.out.println("-" + m.getName()));
+    }
+
+    public void searchByDirector(MovieData data) {
+        System.out.println("Введите имя режиссера");
+        String  directorName = sc.next();
+
+        Map<String, List<Movie>> directorMap = new HashMap<>();
+
+        for (Movie movie : data.movies) {
+            String name = movie.getDirector().getFullName();
+            directorMap.computeIfAbsent(name, k -> new ArrayList<>()).add(movie);
+        }
+
+        List<Movie> results = directorMap.get(directorName);
+        if (results != null) {
+            results.forEach(m -> System.out.println("Найден фильм: " + m.getName()));
+        } else {
+            System.out.println("Режиссер не найден.");
+        }
+    }
+
 }
