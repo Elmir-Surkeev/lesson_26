@@ -5,6 +5,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.nio.charset.StandardCharsets;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class Action {
@@ -62,6 +64,8 @@ public class Action {
                     break;
                 case 3:
                     //сортировка
+                    sortedFilms(data);
+
                     break;
                 default:
                     System.out.println("Введите корректное значение");
@@ -113,10 +117,41 @@ public class Action {
     }
 
 
-        private String normalizeString (String text){
+    private String normalizeString (String text){
             return text.trim()
                     .replaceAll("\\s+", " ")
                     .toLowerCase();
         }
 
+
+    public void sortedFilms(MovieData data) {
+        System.out.println("\n[ Сортировка по названию фильма ]");
+        data.movies.sort((m1, m2) -> m1.getName().compareToIgnoreCase(m2.getName()));
+
+        System.out.printf("| %-45s | %-6s | %-20s |%n", "Название", "Год", "Режиссер");
+
+        for (Movie movie : data.movies) {
+            printMovieRow(movie);
+        }
+
+        System.out.println("\n[ Сортировка по году (от старых к новым) ]");
+        data.movies.sort((m1, m2) -> Integer.compare(m1.getYear(), m2.getYear()));
+
+        for (Movie movie : data.movies) {
+            printMovieRow(movie);
+        }
+        System.out.println("\n[ Сортировка по режиссеру ]");
+        data.movies.sort((m1, m2) -> m1.getDirector().getFullName().compareToIgnoreCase(m2.getDirector().getFullName()));
+
+        for (Movie movie : data.movies) {
+            printMovieRow(movie);
+        }
+    }
+
+    private void printMovieRow(Movie m) {
+        System.out.printf("| %-45s | %-6d | %-20s |%n",
+                m.getName(),
+                m.getYear(),
+                m.getDirector().getFullName());
+    }
 }
