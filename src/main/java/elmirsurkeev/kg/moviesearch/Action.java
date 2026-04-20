@@ -45,6 +45,12 @@ public class Action {
 
         while (true) {
             int choice = sc.nextInt();
+
+            if (data == null) {
+                System.out.println("Список фильмов пуст");
+                return;
+            }
+
             switch (choice) {
                 case 1:
                     //просмотр всех фильмов
@@ -52,6 +58,7 @@ public class Action {
                     break;
                 case 2:
                     //вызов метода по записи
+                    searchMovieByName(data);
                     break;
                 case 3:
                     //сортировка
@@ -63,10 +70,6 @@ public class Action {
     }
 
     public void showAllFilms(MovieData data) {
-        if (data == null) {
-            System.out.println("Список фильмов пуст");
-            return;
-        }
 
         System.out.println("Список фильмов");
 
@@ -88,6 +91,32 @@ public class Action {
 //            }
 
         }
-
     }
+
+    public void searchMovieByName(MovieData data) {
+        System.out.println("Введите название");
+        sc.nextLine();
+        boolean found = false;
+        String name = sc.next();
+        for (Movie movie : data.movies) {
+            if (normalizeString(movie.getName()).contains(normalizeString(name))) {
+                {
+                    System.out.println(movie.getName());
+                    System.out.println(movie.getYear());
+                    found = true;
+                }
+            }
+            if (!found) {
+                System.out.println("К сожалению такого фильма у нас нету");
+            }
+        }
+    }
+
+
+        private String normalizeString (String text){
+            return text.trim()
+                    .replaceAll("\\s+", " ")
+                    .toLowerCase();
+        }
+
 }
