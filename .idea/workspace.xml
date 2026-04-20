@@ -4,15 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff8112c8-d148-4018-9a0f-c2a6c8d75167" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="ff8112c8-d148-4018-9a0f-c2a6c8d75167" name="Changes" comment="added xml and .gitignore files">
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/elmirsurkeev/kg/moviesearch/Action.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/elmirsurkeev/kg/moviesearch/Cast.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/elmirsurkeev/kg/moviesearch/Director.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/elmirsurkeev/kg/moviesearch/Movie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/elmirsurkeev/kg/moviesearch/MovieData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/elmirsurkeev/kg/moviesearch/Director.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/lesson_26.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/src/Action.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elmirsurkeev/kg/moviesearch/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/movies.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +33,19 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Elmir-Surkeev/lesson_26.git",
+    "accountId": "6df4a9a3-d275-4a7c-81f8-08774f8b5577"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/.idea/src/elmirsurkeev/kg/movie_search/Action.java" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -64,7 +78,6 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
@@ -119,7 +132,7 @@
       <updated>1776646562522</updated>
       <workItem from="1776646563537" duration="3032000" />
       <workItem from="1776663775433" duration="1298000" />
-      <workItem from="1776665087144" duration="1814000" />
+      <workItem from="1776665087144" duration="2129000" />
     </task>
     <task id="LOCAL-00001" summary="git initialized and added base files">
       <option name="closed" value="true" />
@@ -137,7 +150,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776661548406</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="deleted trash classes">
+      <option name="closed" value="true" />
+      <created>1776667142292</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1776667142292</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added xml and .gitignore files">
+      <option name="closed" value="true" />
+      <created>1776667211229</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1776667211229</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +186,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="git initialized and added base files" />
     <MESSAGE value="initialise movies.json and create Main, Action classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="initialise movies.json and create Main, Action classes" />
+    <MESSAGE value="deleted trash classes" />
+    <MESSAGE value="added xml and .gitignore files" />
+    <option name="LAST_COMMIT_MESSAGE" value="added xml and .gitignore files" />
   </component>
 </project>
