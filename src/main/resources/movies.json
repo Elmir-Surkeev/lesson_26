@@ -77,7 +77,7 @@
       ]
     },
     {
-      "name": "The Hobbit: The Desolation of Smaug",
+      "name": "Hobbit: The Desolation of Smaug",
       "year": 2013,
       "description": "Movie",
       "director": {
@@ -111,7 +111,7 @@
       ]
     },
     {
-      "name": "The Hobbit: The Battle of the Five Armies",
+      "name": "Hobbit: The Battle of the Five Armies",
       "year": 2014,
       "description": "Movie",
       "director": {
@@ -145,8 +145,8 @@
       ]
     },
     {
-      "name": "Avengers: Endgame",
-      "year": 2019,
+      "name": "Avengers: Infinity War",
+      "year": 2018,
       "description": "Movie",
       "director": {
         "fullName": "Anthony Russo"
@@ -154,11 +154,11 @@
       "cast": [
         {
           "fullName": "Evangeline Lilly",
-          "role": "Hope Van Dyne, Wasp"
+          "role": "Wasp"
         },
         {
           "fullName": "Robert Downey Jr.",
-          "role": "Tony Stark, Iron Man"
+          "role": "Iron Man"
         },
         {
           "fullName": "Chris Hemsworth",
@@ -167,7 +167,7 @@
       ]
     },
     {
-      "name": "Sherlock: Season 1",
+      "name": "Sherlock",
       "year": 2010,
       "description": "TV Series",
       "director": {
@@ -176,15 +176,15 @@
       "cast": [
         {
           "fullName": "Benedict Cumberbatch",
-          "role": " Sherlock Holmes"
+          "role": "Sherlock Holmes"
         },
         {
           "fullName": "Martin Freeman",
-          "role": "Dr. Watson"
+          "role": "John Watson"
         },
         {
           "fullName": "Una Stubbs",
-          "role": "Mrs. Hudson"
+          "role": "Mrs Hudson"
         }
       ]
     }
