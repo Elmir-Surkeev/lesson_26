@@ -78,23 +78,20 @@ public class Action {
 
         System.out.println("Список фильмов");
 
-        for (Movie  movie : data.movies) {
-            System.out.println(movie.getName());
-//            System.out.println(movie.getYear());
-//            System.out.println(movie.getDescription());
-//
-//            if (movie.getDirector() != null) {
-//                System.out.println(movie.getDirector().getFullName());
-//            }
-//
-//            if (movie.getCast() != null) {
-//                System.out.println("Актеры: ");
-//                for (Cast cast : movie.getCast()) {
-//                    System.out.println(cast.getFullName());
-//                    System.out.println(cast.getRole());
-//                }
-//            }
+        for (Movie movie : data.movies) {
+            System.out.println("=".repeat(50));
+            System.out.println("Фильм - " + movie.getName()+ " " + movie.getYear());
 
+            if (movie.getDirector() != null) {
+                System.out.println("Режиссёр: " + movie.getDirector().getFullName());
+            }
+
+            if (movie.getCast() != null && !movie.getCast().isEmpty()) {
+                System.out.println("Актёры: ");
+                for (Cast cast : movie.getCast()) {
+                    System.out.println("   - " + cast.getFullName() + " - " + cast.getRole());
+                }
+            }
         }
     }
 
