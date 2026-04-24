@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff8112c8-d148-4018-9a0f-c2a6c8d75167" name="Changes" comment="added new file in gitignore">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="ff8112c8-d148-4018-9a0f-c2a6c8d75167" name="Changes" comment="added for clean application Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elmirsurkeev/kg/moviesearch/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elmirsurkeev/kg/moviesearch/Action.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/elmirsurkeev/kg/moviesearch/Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/elmirsurkeev/kg/moviesearch/Action.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,7 +132,7 @@
       <workItem from="1776663775433" duration="1298000" />
       <workItem from="1776665087144" duration="9567000" />
       <workItem from="1776681255868" duration="1228000" />
-      <workItem from="1777030114472" duration="2150000" />
+      <workItem from="1777030114472" duration="4593000" />
     </task>
     <task id="LOCAL-00001" summary="git initialized and added base files">
       <option name="closed" value="true" />
@@ -262,7 +262,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777032232273</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="added new file in gitignore">
+      <option name="closed" value="true" />
+      <created>1777032275795</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1777032275795</updated>
+    </task>
+    <task id="LOCAL-00018" summary="added for clean application Commit">
+      <option name="closed" value="true" />
+      <created>1777032499401</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1777032499401</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,6 +312,7 @@
     <MESSAGE value="correct mistake in lesson_26" />
     <MESSAGE value="correct 2 part mistake in lesson_26&#10;&#10;problem with exception then user enter String type data" />
     <MESSAGE value="added new file in gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="added new file in gitignore" />
+    <MESSAGE value="added for clean application Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="added for clean application Commit" />
   </component>
 </project>

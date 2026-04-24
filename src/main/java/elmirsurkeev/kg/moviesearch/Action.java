@@ -104,18 +104,17 @@ public class Action {
         System.out.println("Введите название");
         sc.nextLine();
         boolean found = false;
-        String name = sc.next();
+        // sc.next() почему после него иногда возникают ошибки по типу повторяющегося цикла соразмерно словам в строке
+        String name = sc.nextLine();
         for (Movie movie : data.movies) {
             if (normalizeString(movie.getName()).contains(normalizeString(name))) {
-                {
-                    System.out.println(movie.getName());
-                    System.out.println(movie.getYear());
-                    found = true;
-                }
+                System.out.println(movie.getName());
+                System.out.println(movie.getYear());
+                found = true;
             }
-            if (!found) {
-                System.out.println("К сожалению такого фильма у нас нету");
-            }
+        }
+        if (!found) {
+            System.out.println("К сожалению " + name + " фильма у нас нету");
         }
     }
 
@@ -166,9 +165,10 @@ public class Action {
         System.out.println("\nПоиск фильмов с актером: " + actorName);
         boolean found = false;
 
+        //data.movies.sort((m1, m2) -> m1.getCast().get);
         for (Movie movie : data.movies) {
             for (Cast member : movie.getCast()) {
-                if (member.getFullName().equalsIgnoreCase(actorName)) {
+                if (member.getFullName().equalsIgnoreCase(actorName.toLowerCase())) {
                     System.out.println(movie.getName() + " Роль: " + member.getRole());
                     found = true;
                 }
