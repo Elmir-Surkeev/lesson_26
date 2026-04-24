@@ -38,7 +38,9 @@ public class Action {
     }
 
     public void startApp() {
+
         readJson();
+
         if (data == null) {
             System.out.println("Ошибка: Данные не загружены.");
             return;
@@ -56,20 +58,23 @@ public class Action {
             System.out.println("0. Выход");
             System.out.print("Выберите действие: ");
 
-            int choice = sc.nextInt();
-            sc.nextLine();
+            try {
+                int choice = sc.nextInt();
+                if (choice == 0) break;
 
-            if (choice == 0) break;
-
-            switch (choice) {
-                case 1 -> showAllFilms(data);
-                case 2 -> searchMovieByName(data);
-                case 3 -> sortedFilms(data);
-                case 4 -> searchByActor(data);
-                case 5 -> listAllActors(data);
-                case 6 -> searchByYear(data);
-                case 7 -> searchByDirector(data);
-                default -> System.out.println("Некорректный ввод. Попробуйте снова.");
+                switch (choice) {
+                    case 1 -> showAllFilms(data);
+                    case 2 -> searchMovieByName(data);
+                    case 3 -> sortedFilms(data);
+                    case 4 -> searchByActor(data);
+                    case 5 -> listAllActors(data);
+                    case 6 -> searchByYear(data);
+                    case 7 -> searchByDirector(data);
+                    default -> System.out.println("Некорректный ввод. Попробуйте снова.");
+                }
+            }catch (InputMismatchException e) {
+                System.out.println("Введите цифры пожалуйста");
+                sc.next();
             }
         }
     }
@@ -153,6 +158,7 @@ public class Action {
                 m.getDirector().getFullName());
     }
 
+    //3 часть
     public void searchByActor(MovieData data) {
         System.out.println("Введите имя актера");
         String actorName = sc.next();
@@ -170,6 +176,7 @@ public class Action {
         }
         if (!found) System.out.println("Актер не найден.");
     }
+
     public void listAllActors(MovieData data) {
         System.out.println("Полный список актеров отсортирован");
         TreeSet<String> actors = new TreeSet<>();
