@@ -1,5 +1,6 @@
 package elmirsurkeev.kg.task1;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -60,8 +61,8 @@ final class Cat {
 
     /*********/
 
-    // Ваш код может находиться здесь
-    // остальную часть этого файла вы менять не можете
+
+
 
     /*********/
 }

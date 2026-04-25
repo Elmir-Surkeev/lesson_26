@@ -2,7 +2,7 @@ package elmirsurkeev.kg;
 
 import elmirsurkeev.kg.moviesearch.Action;
 import elmirsurkeev.kg.task1.ActionCat;
-import elmirsurkeev.kg.task2.ActionActiveCat;
+//import elmirsurkeev.kg.task2.ActionActiveCat;
 
 import java.util.Scanner;
 
@@ -10,8 +10,8 @@ public class Main {
     public static void main(String[] args) {
 
         ActionCat actionCat = new ActionCat();
-        ActionActiveCat actionActiveCat = new ActionActiveCat();
-        Action action = new Action();
+        //ActionActiveCat actionActiveCat = new ActionActiveCat();
+        //Action action = new Action();
 
         actionCat.startApp();
 //        Scanner sc = new Scanner(System.in);
