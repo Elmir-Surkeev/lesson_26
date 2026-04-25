@@ -62,7 +62,7 @@ public class Action {
             try {
                 int choice = sc.nextInt();
                 if (choice == 0) break;
-
+                sc.nextLine();
                 switch (choice) {
                     case 1 -> showAllFilms(data);
                     case 2 -> searchMovieByName(data);
@@ -138,11 +138,20 @@ public class Action {
         }
 
         System.out.println("\n[ Сортировка по году (от старых к новым) ]");
-        data.movies.sort((m1, m2) -> Integer.compare(m1.getYear(), m2.getYear()));
+        data.movies.sort(Comparator.comparingInt(Movie::getYear));
 
         for (Movie movie : data.movies) {
             printMovieRow(movie);
         }
+
+
+        System.out.println("\n[ Сортировка по году (от новых к старым) ]");
+        data.movies.sort(Comparator.comparingInt(Movie::getYear));
+
+        for (Movie movie : data.movies) {
+            printMovieRow(movie);
+        }
+
         System.out.println("\n[ Сортировка по режиссеру ]");
         data.movies.sort((m1, m2) -> m1.getDirector().getFullName().compareToIgnoreCase(m2.getDirector().getFullName()));
 
@@ -158,15 +167,12 @@ public class Action {
                 m.getDirector().getFullName());
     }
 
-    //3 часть
     public void searchByActor(MovieData data) {
         System.out.println("Введите имя актера");
-        String actorName = sc.next();
+        String actorName = sc.nextLine().trim();
 
-        System.out.println("\nПоиск фильмов с актером: " + actorName);
         boolean found = false;
-
-        //data.movies.sort((m1, m2) -> m1.getCast().get);
+        System.out.println("\nПоиск фильмов с актером: " + actorName);
         for (Movie movie : data.movies) {
             for (Cast member : movie.getCast()) {
                 if (member.getFullName().equalsIgnoreCase(actorName.toLowerCase())) {
@@ -203,7 +209,7 @@ public class Action {
 
     public void searchByDirector(MovieData data) {
         System.out.println("Введите имя режиссера");
-        String  directorName = sc.next();
+        String  directorName = sc.nextLine().trim();
 
         Map<String, List<Movie>> directorMap = new HashMap<>();
 
@@ -213,6 +219,7 @@ public class Action {
         }
 
         List<Movie> results = directorMap.get(directorName);
+
         if (results != null) {
             results.forEach(m -> System.out.println("Найден фильм: " + m.getName()));
         } else {
