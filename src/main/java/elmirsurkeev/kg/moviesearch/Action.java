@@ -2,6 +2,7 @@ package elmirsurkeev.kg.moviesearch;
 
 import com.google.gson.Gson;
 
+import javax.management.relation.Role;
 import javax.xml.crypto.Data;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -179,16 +180,16 @@ public class Action {
 
     public void listAllActors(MovieData data) {
         System.out.println("Полный список актеров отсортирован");
-        TreeSet<String> actors = new TreeSet<>();
-
+        Map<String, Set<String>> actors = new TreeMap<>();
         for (Movie movie : data.movies) {
-            for (Cast member : movie.getCast()) {
-                actors.add(member.getFullName() + "роль: " + member.getRole());
-            }
+           for (Cast cast : movie.getCast()){
+               String name = cast.getFullName();
+               String role = cast.getRole();
+               actors.computeIfAbsent(name, k -> new LinkedHashSet<>()).add(role);
+           }
         }
-
-        for (String actorInfo : actors) {
-            System.out.println(actorInfo);
+        for (Map.Entry<String, Set<String>> entry : actors.entrySet()) {
+            System.out.println(entry.getKey() + " роли: " + String.join(", ", entry.getValue()));
         }
     }
     public void searchByYear(MovieData data) {
