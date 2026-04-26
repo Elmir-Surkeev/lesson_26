@@ -30,12 +30,15 @@ public class ActionCat {
         System.out.println("Сортировка по возрасту в порядке возрастания");
         Printer.print(cats);
 
+
+
+        //для сравнения enum нужно использовать ==
+        // ведь важно чтобы булевое значение было, классическим equalsIgnoreCase не получится
         System.out.println("Введите цвет для удаления" +
                 "\n TABBY, SILVER, GRAY, PEACH, GINGER, TORTIE");
 
-        String enterName = sc.nextLine();
-
-        cats.removeIf((cat -> cat.equals(enterName.toUpperCase())));
+        String enterName = sc.nextLine().trim().toUpperCase();
+        cats.removeIf(cat -> cat.getColor() == Cat.Color.valueOf(enterName));
         Printer.print(cats);
 
         System.out.println("Сортировка где длина имени больше 5 символов");
