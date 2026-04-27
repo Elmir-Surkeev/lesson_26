@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff8112c8-d148-4018-9a0f-c2a6c8d75167" name="Changes" comment="finish multiply transition methods">
+    <list default="true" id="ff8112c8-d148-4018-9a0f-c2a6c8d75167" name="Changes" comment="added disActive files in gitIgnore">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/elmirsurkeev/kg/task1/ActionCat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elmirsurkeev/kg/task1/ActionCat.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -333,7 +332,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777274330555</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="added disActive files in gitIgnore">
+      <option name="closed" value="true" />
+      <created>1777276424284</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1777276424284</updated>
+    </task>
+    <task id="LOCAL-00026" summary="added disActive files in gitIgnore">
+      <option name="closed" value="true" />
+      <created>1777276493635</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1777276493635</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,6 +389,7 @@
     <MESSAGE value="fix task1 for delete by color&#10;&#10;&#10;problem was with using equals in comparison ENUM&#10;but we must be use classic comparison ==" />
     <MESSAGE value="add task 2 &#10;&#10;&#10;problem&#10;have not interface which realise method perform" />
     <MESSAGE value="finish multiply transition methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish multiply transition methods" />
+    <MESSAGE value="added disActive files in gitIgnore" />
+    <option name="LAST_COMMIT_MESSAGE" value="added disActive files in gitIgnore" />
   </component>
 </project>
