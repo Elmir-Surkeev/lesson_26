@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ff8112c8-d148-4018-9a0f-c2a6c8d75167" name="Changes" comment="added disActive files in gitIgnore">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -348,7 +347,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777276493635</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="added disActive files in gitIgnore">
+      <option name="closed" value="true" />
+      <created>1777276576867</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1777276576867</updated>
+    </task>
+    <task id="LOCAL-00028" summary="added disActive files in gitIgnore">
+      <option name="closed" value="true" />
+      <created>1777276609555</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1777276609555</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
