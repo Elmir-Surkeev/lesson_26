@@ -54,7 +54,6 @@ public class ActionCat {
                         System.out.println("Введите цвет для удаления" +
                                 "\n TABBY, SILVER, GRAY, PEACH, GINGER, TORTIE");
 
-
                         while (true){
 
                             try {
