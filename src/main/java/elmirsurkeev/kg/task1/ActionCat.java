@@ -11,16 +11,17 @@ public class ActionCat {
     public void startApp() {
 
         var cats = Cat.makeCats(10);
+        System.out.println("Вывод созданных котов");
         Printer.print(cats);
 
         while(true){
             try{
-                System.out.println("Введите желаемое деиствие" +
+                System.out.println("Введите желаемое действие" +
                         "\n 1 по породе кота" +
                         "\n 2 по имени" +
                         "\n 3 по возрасту в порядке возрастания" +
                         "\n 4 по возрасту в порядке убывания" +
-                        "\n 5 для сортировки без выбранного цвета" +
+                        "\n 5 для сортировки c удалением выбранного цвета" +
                         "\n 6 по имени чья длина больше 5 символов" +
                         "\n 0 для выхода" );
                 int choice = sc.nextInt();
@@ -61,30 +62,23 @@ public class ActionCat {
                                 copyCat.removeIf(cat -> cat.getColor() == Cat.Color.valueOf(enterName));
                                 Printer.print(copyCat);
                                 break;
+
                             }catch (Exception e){
-                                System.out.println("Введите коррекное значение");
-                                sc.nextLine();
+                                System.out.println("Введите корректное значение");
                             }
                         }
                         break;
                     case 6:
+                        //Копия чтобы не трогать основной лист котов
                         List<Cat> copyCatForName = new ArrayList<>(cats);
                         System.out.println("Сортировка где длина имени больше 5 символов");
-                        // невозможно кажись, мешает лист с names где исопльзован list.of(неизменямый)
-                        //copyCatForName.removeIf((cat -> cat.getName().length() > 5));
-
-                        //минимальная реализация
-                        Predicate<Cat> longerThan5 = cat -> cat.getName().length() > 5;
-                        for (Cat cat : copyCatForName) {
-                            if (longerThan5.test(cat)) {
-                                System.out.println("Коты где длина симвлов в имени больше 5 " + cat.getName() + " " + cat.getColor());
-                            }
-                        }
+                        copyCatForName.removeIf((cat -> cat.getName().length() <= 5));
+                        Printer.print(copyCatForName);
                         break;
                     case 0:
-                        break;
+                        return;
                     default:
-                        System.out.println("Введите корректное деиствие (цифры 0-6)");
+                        System.out.println("Введите корректное действие (цифры 0-6)");
                 }
             }catch (Exception e){
                 System.out.println("Введите цифру");

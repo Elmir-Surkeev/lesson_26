@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff8112c8-d148-4018-9a0f-c2a6c8d75167" name="Changes" comment="fix task1 for delete by color&#10;&#10;&#10;problem was with using equals in comparison ENUM&#10;but we must be use classic comparison ==">
-      <change afterPath="$PROJECT_DIR$/src/main/java/elmirsurkeev/kg/task1/Actionn.java" afterDir="false" />
+    <list default="true" id="ff8112c8-d148-4018-9a0f-c2a6c8d75167" name="Changes" comment="add task 2 &#10;&#10;&#10;problem&#10;have not interface which realise method perform">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/elmirsurkeev/kg/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elmirsurkeev/kg/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/elmirsurkeev/kg/task2/ActionActiveCat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elmirsurkeev/kg/task2/ActionActiveCat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/elmirsurkeev/kg/task2/ActiveCat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elmirsurkeev/kg/task2/ActiveCat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elmirsurkeev/kg/task1/ActionCat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elmirsurkeev/kg/task1/ActionCat.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -319,7 +316,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777196138849</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="add task 2 &#10;&#10;&#10;problem&#10;have not interface which realise method perform">
+      <option name="closed" value="true" />
+      <created>1777271974917</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1777271974917</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,6 +363,7 @@
     <MESSAGE value="correct mistake in lesson 26 part &#10;&#10;problem with search directors movie change with new theme" />
     <MESSAGE value="added task1 and task2 in lesson 27&#10;&#10;also create multiply functional for easy check homework" />
     <MESSAGE value="fix task1 for delete by color&#10;&#10;&#10;problem was with using equals in comparison ENUM&#10;but we must be use classic comparison ==" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix task1 for delete by color&#10;&#10;&#10;problem was with using equals in comparison ENUM&#10;but we must be use classic comparison ==" />
+    <MESSAGE value="add task 2 &#10;&#10;&#10;problem&#10;have not interface which realise method perform" />
+    <option name="LAST_COMMIT_MESSAGE" value="add task 2 &#10;&#10;&#10;problem&#10;have not interface which realise method perform" />
   </component>
 </project>
