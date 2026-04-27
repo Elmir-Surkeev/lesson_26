@@ -1,5 +1,7 @@
 package elmirsurkeev.kg.task2;
 
+import elmirsurkeev.kg.task1.Actionn;
+
 import java.util.List;
 import java.util.Random;
 
@@ -15,9 +17,9 @@ public final class ActiveCat {
             "Millie", "Daisy", "Jasper", "Misty", "Minka");
     private final String name;
 
-    private ??? action;
+    private Actionn action;
 
-    public ActiveCat(??? action) {
+    public ActiveCat(Actionn action) {
         name = names.get(r.nextInt(names.size()));
         this.action = action;
     }

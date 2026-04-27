@@ -13,10 +13,10 @@ public class ActionActiveCat {
 
         // каждый кот должен уметь выполнять что-то своё
         var cats = new ArrayList<ActiveCat>();
-        // cats.add(new ActiveCat(???));
-        //cats.add(new ActiveCat(???));
-        //cats.add(new ActiveCat(???));
-        // добавьте ещё два-три кота, с совершенно другими действиями
+        cats.add(new ActiveCat(ActiveCat::jump));
+        cats.add(new ActiveCat(ActiveCat::sleep));
+        cats.add(new ActiveCat(ActiveCat::eat));
+        cats.add(new ActiveCat(() -> "Я играю"));
 
         cats.forEach(ActiveCat::doAction);
     }
